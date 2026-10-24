@@ -20,15 +20,10 @@ const storesData = {
       { id: 103, title: "Mechanical RGB Keyboard", price: 8500, category: "Accessories", image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop" },
       { id: 104, title: "Ergonomic Gaming Mouse", price: 4500, category: "Accessories", image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&auto=format&fit=crop" },
       { id: 105, title: "4K Ultra HD Action Camera", price: 29000, category: "Cameras", image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&auto=format&fit=crop" },
-      
-      // ✅ Fixed Image Link (Wireless Charger)
       { id: 106, title: "Fast Wireless Charging Pad", price: 3500, category: "Accessories", image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop" },
-      
       { id: 107, title: "Bluetooth Portable Speaker", price: 7200, category: "Audio", image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop" },
       { id: 108, title: "Active Noise Cancelling Earbuds", price: 9500, category: "Audio", image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&auto=format&fit=crop" },
       { id: 109, title: "RGB Gaming Headset Stand", price: 3200, category: "Accessories", image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&auto=format&fit=crop" },
-      
-      // ✅ Fixed Image Link (Power Bank)
       { id: 110, title: "10000mAh Slim Power Bank", price: 4200, category: "Accessories", image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&auto=format&fit=crop" }
     ]
   },
@@ -97,11 +92,11 @@ export default function App() {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-800 font-sans selection:bg-blue-600 selection:text-white">
-      {/* Top Announcement Bar with Truck SVG Icon */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white text-center py-2 text-xs sm:text-sm font-medium px-4 flex items-center justify-center gap-2">
-        <span>Welcome to Sohail Stores — Owner: <span className="font-bold underline decoration-blue-500">Sohail Khan</span> | Nationwide Express Delivery</span>
-        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className="bg-slate-50 min-h-screen text-slate-800 font-sans selection:bg-blue-600 selection:text-white relative overflow-x-hidden">
+      {/* Top Announcement Bar */}
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white text-center py-2 text-[11px] sm:text-xs md:text-sm font-medium px-2 sm:px-4 flex items-center justify-center gap-1.5 sm:gap-2">
+        <span>Welcome to Sohail Stores — Owner: <span className="font-bold underline decoration-blue-500">Sohail Khan</span> | Express Delivery</span>
+        <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </div>
@@ -126,23 +121,23 @@ export default function App() {
         setCart={setCart}
       />
 
-      {/* Animated Floating WhatsApp Button with Professional Vector SVG */}
+      {/* Floating Animated WhatsApp Button (Positioned Responsively) */}
       <a 
         href="https://wa.me/923000000000?text=Hello%20Sohail%20Sahab,%20I%20want%20to%20inquire%20about%20your%20store%20products." 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="fixed bottom-6 right-6 bg-[#25d366] text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 z-50 hover:scale-105 transition-transform duration-300"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-[#25d366] text-white px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl flex items-center gap-2 sm:gap-3 z-40 hover:scale-105 transition-transform duration-300"
       >
-        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
         </svg>
-        <span className="text-[10px] bg-black/20 px-2 py-0.5 rounded-md font-bold uppercase tracking-wider">Online</span>
-        <span className="font-semibold text-sm">Chat with Sohail</span>
+        <span className="text-[9px] sm:text-[10px] bg-black/20 px-1.5 sm:px-2 py-0.5 rounded-md font-bold uppercase tracking-wider hidden xs:inline">Online</span>
+        <span className="font-semibold text-xs sm:text-sm">Chat with Sohail</span>
       </a>
 
       <Footer setCurrentStore={setCurrentStore} />
 
-      {/* 🤖 Smart Auto-Search AI Chat Bot (Added Here Successfully) */}
+      {/* Smart Auto-Search AI Chat Bot */}
       <ChatBot />
     </div>
   );
